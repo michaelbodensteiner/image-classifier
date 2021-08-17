@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Components</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script></link>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <link rel="stylesheet" href="./static/css/styleK.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Viterbi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="EndangeresSpeciesProject.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Species_Dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="directory.html">Directory</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Narratives.html">Narratives</a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+      
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col col-lg-2"></div>
+          <div class="col-md-auto">
+            <h1 class='text-center'>Let's take a look at some quick graphs to get a better idea of the situation.
+            </h1>
+          </div>
+          <div class="col col-lg-2"></div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div style="height: 1050px;"></div>
+          <div class="col-sm-8">
+            <div class="ct-chart ct-golden-section" id="chart1"></div>
+          </div>
+          <div class="col-4">
+            <h2 class = 'text-center'>Countries with >100 Critically Endangered, Endangered, or Vulnerable Species</h2>
+            <br>
+            <br>
+            <p>
+              To the left, we have a bar chart showing countries and the number of critically endangered, endangered, 
+              or vulnerable species that this country is home to. For the purpose of simplicity, we have only graphed
+              countries which have 100 or more at-risk species. Please note that there are a total of 238 countries that
+              currently have at-risk species. The chart to the right shows the top 44 countries and their count of species.
+            </p>
+            <br>
+            <p>
+              As we can see, it seems the countries whose wildlife is being affected the most are: <ul>
+                <li>
+                  Indonesia with 535 at-risk species
+                </li>
+                <li>
+                  Columbia with 495 at-risk species
+                </li>
+                <li>
+                  Mexico with 417 at-risk species
+                </li>
+                <li>
+                  Ecuador with 411 at-risk species
+                </li>
+                <li>
+                  Brazil with 389 at-risk species
+                </li>
+                <li>
+                  India with 360 at-risk species
+                </li>
+                <li>
+                  China with 360 at-risk species
+                </li>
+              </ul>
+            </p>
+            <br>
+            <p>
+              For the purposes of our project, our database contains the following types of species: birds, mammals, 
+              and reptiles.
+            </p>
+            <br>
+            <p>
+              <h4 class = 'text-center'>Navigate to our BLANK tab here to explore these species in further detail!</h4>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="dropdown">
+              <select id="lineSelect">
+                <option value="cr">Critically Endangered Species</option>
+                <option value="en">Endangered Species</option>
+                <option value="vu">Vulnerable Species</option>
+              </select>
+            </div>
+            <br>
+            <h2 class = 'text-center'>Species Populations from 1996-2021 </h2>
+            <br>
+            <p>
+              To the right, we have a line chart tracking the population of each type of species from the years 1996 to 2021.
+              As shown in the legend in the top left corner of the chart, each line corresponds to the population count for
+              birds, mammals, and reptiles with a separateline charting the total population count for all three species 
+              types combined. Please refer to the legend for reference.
+            </p>
+            <p>The default view of this chart is showing the population count for all species currently within the 
+              "Critically Endangered" category. <b>Use the dropdown above to show species population counts for species in 
+              the "Endangered" and "Vulnerable" categories!</b>
+            </p>
+            <p>
+              As we can see, it seems the population for all animal type in the "Critically Endangered" category has increased 
+              over time suggesting that although these species are still critically endangered, conservation efforts have 
+              made it possible for these species to grow. <br>
+              For "Endangered" species, we see a similar upward trend where endangered birds, mammals, and reptiles have
+              successfully grown in numbers although still remain endangered. It is important to note that much of this overall
+              growth may be due to the sudden increase in endangered reptile populations; as the population count for mammals 
+              and birds has remained pretty steady.<br>
+              Species in the "Vulnerable" caegory also have an upward trend overall however, in this category we can see that 
+              vulnerable mammal populations have took a dip in 2008 and have no been able to recover since. While ir populations 
+              seem to remain steady, it seems that reptile populatiions are once again the biggest contribution to the overall 
+              uptick in population counts for vulnerable species.  
+            </p>
+            <br>
+            <p>
+              As a reminder, for the purposes of our project, our database contains the following types of species: birds, mammals, and reptiles.
+            </p>
+          </div>
+          <div style="height: 1000px;"></div>
+          <div class="col-sm-8">
+            <div class="legend-position"></div>
+            <div class="ct-chart ct-golden-section" id="chart2" chartist-chart-options="chartist.lineOptions"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div style="height: 1000px;"></div>
+          <div class="col-sm-8">
+            <div class="ct-chart ct-golden-section" id="chart3"></div>
+          </div>
+          <div class="col-4">
+            <h2 class = 'text-center'> Conservation Efforts</h2>
+            <br>
+            <br>
+            <p>
+              To the left, we have a donut chart displaying the most prevalent conservation efforts currently being used to
+              combat many of the threats that critically endangered, endangered, and vulnerable species are facing. Each of
+              these efforts are shown with the percentage describing how often this conservation method is used in relation to 
+              our database of species. 
+            </p>
+            <br>
+            <p>
+              Please note that any conservation effort which was utilized 2% or less was placed into the "Other" category for 
+              readability purposes. As a reminder, for the purposes of our project, our database contains the following types 
+              of species: birds, mammals, and reptiles.
+            </p>
+            <br>
+            <p>
+              Below are brief descriptions of the most popular conservation efforts that can be observed in our donut chart:
+              <ul>
+                <li>
+                  Site/are protection: Protecting the geographical site where the species lives through legal means. These
+                  protected sites are designated by national authorities as scientific reserves with limited public access, 
+                  national parks, natural monuments, nature reserves or wildlife sanctuaries, protected landscapes, and 
+                  areas managed mainly for sustainable use. 
+                </li>
+                <li>
+                  Site/area management: Management of a protected area that require regular, active interventions to address 
+                  the requirements of particular species within the area. For example, protecting vegetation patterns or other 
+                  biological features,protecting fragments of habitats as components of landscape or seascape-scale conservation 
+                  strategies
+                </li>
+                <li>
+                  Resource and habitat protection: Focus on protecting the habitats in which the at-risk species live in. This 
+                  promotes sustainable use of natural resources and social and economic benefits to local communities where 
+                  relevant. 
+                </li>
+                <li>
+                  Awareness & communications: To develop public education and appreciation of the species and/or habitats 
+                  concerned. Communication, Education and Public Awareness are important instruments for conservation and 
+                  sustainable use of biodiversity. Motivates people towards mobilizing individual and collective action.
+                </li>
+              </ul>
+            </p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr><th>Category</th><th>Year</th><th>Mammals</th><th>Birds</th><th>Reptiles</th><th>Total</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div> -->
+    </div>
+      
+   <!-- Footer -->
+   <footer class="bg-dark text-center text-white">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright
+      <p> Created By: Jonathan Salazar, Karen Gutierrez , Micheal Bodensteiner  <a class="text-white" href="https://github.com/jonathan-salazar/Endangered-Species">REPO</a></p>
+
+    </div>
+  </footer>
+  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="./static/js/chartist-plugin-legend.js"></script>
+<script src="./static/js/chartist-plugin-targetline.js"></script>
+<script src="./static/js/dashboard.js"></script>
+<script src="./static/js/linechart_dropdown.js"></script>
+
+</body>
+
+</html>

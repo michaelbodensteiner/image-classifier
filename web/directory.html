@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Bootstrap Components</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" >
+
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="./static/css/styleM.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Viterbi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="EndangeresSpeciesProject.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Species_Dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="directory.html">Directory</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Narratives.html">Narratives</a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+
+    <div>
+    <div class="container">
+      <div class="jumbotron">
+          <h1>Species Directory</h1>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+            <input id="myInput" class="form-control" onkeyup="myFunction()" type="text" placeholder="Search for name..">
+            <table id="myTable" class="table table-sortbale"> 
+             
+              <thead class="col-md-12">
+                <tr><th style="width:25px">TaxonID</th><th style="width:25px">Category</th><th style="width:25px">Main Common Name</th><th style="width:25px">Class Name</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+
+
+<!-- <script src="./src/tablesort.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src = "https://d3js.org/d3-request.v1.min.js"></script>
+
+
+<script>
+var species =  d3.json('http://127.0.0.1:5000/api/v1.0/all_species', function(data) {
+    console.log(data);
+      
+    d3.select("tbody")
+    .selectAll("tr")
+    .data(data)
+    .enter()
+    .append("tr")
+    .html(function(d) {
+      return `<td><a href="species_details.html?taxonid=${d.taxonid}">${d.taxonid}</a></td><td>${d.category}</td><td>${d.main_common_name}</td><td>${d.class_name}</td>`;
+    });
+});
+
+function myFunction() {
+var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0]; // for column one
+     td1 = tr[i].getElementsByTagName("td")[2]; // for column three
+      td2 = tr[i].getElementsByTagName("td")[3]; // need to added logic in || 
+/* ADD columns here that you want you to filter to be used on */
+    if (td) {
+      if ( (td.innerHTML.toUpperCase().indexOf(filter) > -1) || (td1.innerHTML.toUpperCase().indexOf(filter) > -1) )  {            
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+} 
+</script>
+
+<!-- Footer -->
+   <footer class="bg-dark text-center text-white">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright
+      <p> Created By: Jonathan Salazar, Karen Gutierrez , Micheal Bodensteiner  <a class="text-white" href="https://github.com/jonathan-salazar/Endangered-Species">REPO</a></p>
+
+    </div>
+  </footer>
+</body>
+
+</html>

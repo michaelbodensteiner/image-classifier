@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Endangered Species Project</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="./static/css/cover.css" rel="stylesheet">
+
+    <link href="./static/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Viterbi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="EndangeresSpeciesProject.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Species_Dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="directory.html">Directory</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Narratives.html">Narratives</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="./static/images/Leopard.jpeg" alt="First slide" width="1080" height="600">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Admire.</h1>
+                <p>Ensure the world’s most iconic species are secured and recovering in the wild.</p>
+                <p><a class="btn btn-lg btn-secondary" href="directory.html" role="button">Species Directory</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="./static/images/safari-tour.jpeg" alt="Second slide" width="1080" height="600">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Conserve.</h1>
+                <p>Conserving wildlife is at heart of our mission. We focus on protecting populations of some of the world’s most ecologically, economically, and culturally important species—the survival of which are threatened by poaching, illegal trade and habitat loss</p>
+                <p><a class="btn btn-lg btn-secondary" href="directory.html" role="button">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="./static/images/whale-shark-wallpaper-1.jpeg" alt="Third slide" width="1080" height="600">
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>Reduce.</h1>
+                <p>Overexploitation of fish and other resources, destructive fishing, unregulated development, pollution and climate change are altering oceans in numerous ways.</p>
+                <p><a class="btn btn-lg btn-secondary" href="Species_Dashboard.html" role="button">Dashboard</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="fourth-slide" src="./static/images/rainforst.jpeg" alt="Fourth slide" width="1080" height="600">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Protect.</h1>
+                <p>We protect wildlife for many reasons. It is a source of inspiration. It nurtures a sense of wonder. It is integral to the balance of nature.</p>
+                <p><a class="btn btn-lg btn-secondary" href="narratives.html" role="button">Habitat Threats</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+    <br>
+      <div class="container">
+        <div class="row featurette">
+            <div class="col-md-10">
+              <h2 class="featurette-heading">Applying Data Science.  <span class="text-muted">Using GeoJSON Spatial Files</span></h2>
+              <p class="lead">Harness the power of science to advance conservation of the most important species and places on Earth.</p>
+            </div>
+          </div>
+    <div>
+        <div class="home-map"><svg id="map"></svg></div>
+        <div id="map2"></div>
+
+        <h3 style="text-align: left;">Figure 1: The D3 graphic above displays the number of endangered species within each country. Hover over a marker to display the country name and count.</h3>
+      </div>
+      <hr class="featurette-divider">
+      <br><br>
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="./static/images/Black-Felix-Oppenheim.jpeg" alt="Black_Rhino" width="140" height="140">
+            <h2>Black Rhino</h2>
+            <p>There are now three remaining recognised subspecies/genetic management clusters of Black Rhino occupying different areas of Africa. 
+                Strong support for this classification has been provided by independent analyses of different genetic data sets by different researchers using different analytical methods. 
+                See Taxonomic Notes for more details.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="./static/images/Dama-Gazelle.jpeg" alt="Generic placeholder image" width="140" height="140">
+            <h2>Dama Gazelle</h2>
+            <p>Formerly widespread in the Sahara and Sahel zones, but their range and numbers have been extremely reduced. 
+                Dama Gazelle are now probably extinct from Morocco and Algeria.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="./static/images/BooFrog.jpeg" alt="Generic placeholder image" width="140" height="140">
+            <h2>Booroolong Frog</h2>
+            <p>This Australian endemic ranges from the Queensland border south down the Great Dividing Range almost to the Victorian border. 
+                It has not been recorded from the Northern Tablelands during the past 15 years despite extensive surveys.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-10">
+            <h2 class="featurette-heading">Improving Human Lives</h2>
+            <p class="lead">By protecting species, we also protect the essential goods and services that make our lives possible and contribute enormously to human health and well-being — breathable air, clean water, food, fibers, building materials, medicines, energy, fertile soils, climate regulation, transport, and recreational and spiritual values.</p>
+            <img class="human" src="./static/images/Gardens-by-the-Bay.jpeg" alt="Human" width="1080" height="600">
+        </div>
+        </div>
+<br> <br>
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+
+
+      <!-- Footer -->
+<footer class="text-center text-white">
+  <!-- Copyright -->
+  <div class="text-center p-3">
+    © 2021 Copyright
+    <p> Created By: Jonathan Salazar, Karen Gutierrez , Micheal Bodensteiner  <a class="text-white" href="https://github.com/jonathan-salazar/Endangered-Species">REPO</a></p>
+
+  </div>
+</footer>
+    </main>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="./static/js/map2.js"></script>
+  </body>
+</html>

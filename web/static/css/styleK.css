@@ -1,0 +1,130 @@
+.ct-legend {
+  position: relative;
+  z-index: 10;
+}
+
+.ct-legend li {
+  position: relative;
+  padding-left: 23px;
+  margin-bottom: 3px;
+  list-style-type: none;
+}
+
+.ct-legend li:before {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  content: '';
+  border: 3px solid transparent;
+  border-radius: 2px;
+}
+
+.ct-legend li.inactive:before {
+  background: transparent;
+}
+
+.ct-legend.ct-legend-inside {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.ct-legend .ct-series-0:before {
+  background-color: #D17905;
+  border-color: #D17905;
+}
+
+.ct-legend .ct-series-1:before {
+  background-color: #F4C63D;
+  border-color: #F4C63D;
+}
+
+.ct-legend .ct-series-2:before {
+  background-color: #F05B4F;
+  border-color: #F05B4F;
+}
+
+.ct-legend .ct-series-3:before {
+  background-color: #D70206;
+  border-color: #D70206;
+}
+
+.ct-legend .ct-series-4:before {
+  background-color: #1a2d2b;
+  border-color: #1a2d2b;
+}
+
+.ct-legend .ct-series-5:before {
+  background-color: #227217;
+  border-color: #227217;
+}
+
+.ct-legend .ct-series-6:before {
+  background-color: #0eebc6;
+  border-color: #0eebc6;
+}
+
+.ct-legend .ct-series-7:before {
+  background-color: #75149d;
+  border-color: #75149d;
+}
+
+.ct-legend .ct-series-8:before {
+  background-color: #3d3507;
+  border-color: #3d3507;
+}
+
+.ct-legend .ct-series-9:before {
+  background-color: #8a6999;
+  border-color: #8a6999;
+}
+
+.ct-legend .ct-series-10:before {
+  background-color: #006ab1;
+  border-color: #006ab1;
+}
+
+.ct-legend .ct-series-11:before {
+  background-color: #641945;
+  border-color: #641945;
+}
+
+.ct-legend .ct-series-12:before {
+  background-color: #219011;
+  border-color: #219011;
+}
+
+.ct-legend .ct-series-13:before {
+  background-color: #1d0eb2;
+  border-color: #1d0eb2;
+}
+
+.ct-legend .ct-series-14:before {
+  background-color: #a07e37;
+  border-color: #a07e37;
+}
+
+.ct-legend .ct-series-15:before {
+  background-color: #bd1d95;
+  border-color: #bd1d95;
+}
+
+.ct-legend .ct-series-16:before {
+  background-color: #999999;
+  border-color: #999999;
+}
+
+.ct-legend .ct-series-17:before {
+  background-color: #f15d00;
+  border-color: #f15d00;
+}
+
+.ct-chart .ct-label.ct-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+/*# sourceMappingURL=style.css.map */

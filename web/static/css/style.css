@@ -1,0 +1,45 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+.body{
+    background-image: url("../images/Rhino_(234581759).jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% ;
+}
+
+.cover-heading{
+    color: #C70039 ;
+}
+
+.home-map{
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.detail-map{
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;    
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.container.marketing{
+    margin-top: 50px;
+}
+
+.btn.btn-lg.btn-secondary{
+    background-color: #333333;
+    color: white;
+    opacity: 70%;
+}
+
+.jumbotron.text-center.title-narrrative{
+    background-image: url(../images/topo.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
