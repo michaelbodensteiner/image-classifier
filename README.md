@@ -27,7 +27,7 @@ In order to successfully complete this project, the team's workflow was executed
 ## Usage
 This application can be accessed [here](https://felines-test.herokuapp.com/).  
 
-To use this image classifier and predict your own imagaes, try using species with these scientific names:  
+To use this image classifier and predict your own images, try using species with these scientific names:  
 
 Acinonyx jubatus, Caracal caracal, Felis chaus, Felis silvestris, Herpailurus yagouaroundi, 
 Leopardus geoffroyi, Leopardus pardalis, Leopardus wiedii, Leptailurus serval, Lynx canadensis, 
