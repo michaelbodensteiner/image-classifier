@@ -31,7 +31,7 @@ To use this image classifier and predict your own images, try using species with
 
 Acinonyx jubatus, Caracal caracal, Felis chaus, Felis silvestris, Herpailurus yagouaroundi, 
 Leopardus geoffroyi, Leopardus pardalis, Leopardus wiedii, Leptailurus serval, Lynx canadensis, 
-Lynx lynx, Lynx rufus, Panthera leo, Panthera onca, Panthera pardus_kotiya, Panthera pardus,
+Lynx lynx, Lynx rufus, Panthera leo, Panthera onca, Panthera pardus kotiya, Panthera pardus,
 Panthera tigris tigris, Panthera uncia, Prionailurus bengalensis, or Puma concolor.  
 
 <img width="679" alt="predict_example" src="https://user-images.githubusercontent.com/80362935/142337048-cbd57409-3a53-4dc5-9d5e-092ee1db844e.png">
